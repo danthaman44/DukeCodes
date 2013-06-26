@@ -1,23 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYx-Vo-nbY">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="clear">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeGreeting:" destination="2" eventType="touchUpInside" id="4jb-ow-6dc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROr-f4-502">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="i5F-Lw-RQG"/>
+                                    <constraint firstAttribute="height" constant="102" id="ogV-Lq-Se4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter your major" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHL-HF-3JS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="Nt8-8R-JTr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="nyQ-uv-EaU"/>
+                                </connections>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAU-wk-sqh">
+                                <items>
+                                    <navigationItem title="DukeCodes" id="qlt-8T-LiO"/>
+                                </items>
+                            </navigationBar>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0q-OP-eVq">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items/>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MAU-wk-sqh" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="23d-SX-ABc"/>
+                            <constraint firstItem="CHL-HF-3JS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="63" id="9QG-o5-Mop"/>
+                            <constraint firstItem="MAU-wk-sqh" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="EaF-0J-M6a"/>
+                            <constraint firstItem="ROr-f4-502" firstAttribute="top" secondItem="3" secondAttribute="top" constant="104" id="GRR-In-ZGx"/>
+                            <constraint firstItem="j0q-OP-eVq" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="N97-CM-S9V"/>
+                            <constraint firstItem="MAU-wk-sqh" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="PcV-f1-wg3"/>
+                            <constraint firstItem="CHL-HF-3JS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R3i-O7-1Vh"/>
+                            <constraint firstAttribute="trailing" secondItem="sYx-Vo-nbY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VRL-c3-C9W"/>
+                            <constraint firstItem="ROr-f4-502" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="57" id="bnO-9D-KG2"/>
+                            <constraint firstItem="j0q-OP-eVq" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="d01-v9-YZX"/>
+                            <constraint firstItem="sYx-Vo-nbY" firstAttribute="baseline" secondItem="CHL-HF-3JS" secondAttribute="baseline" type="default" id="dRt-sh-K0b"/>
+                            <constraint firstItem="CHL-HF-3JS" firstAttribute="top" secondItem="sYx-Vo-nbY" secondAttribute="top" type="default" id="iS4-4Z-A2d"/>
+                            <constraint firstItem="CHL-HF-3JS" firstAttribute="bottom" secondItem="sYx-Vo-nbY" secondAttribute="bottom" type="default" id="m7z-Py-3yP"/>
+                            <constraint firstItem="j0q-OP-eVq" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="tsN-zm-kwc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="ROr-f4-502" id="bFd-sO-taN"/>
+                        <outlet property="textField" destination="CHL-HF-3JS" id="Rxj-eh-SQZ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeGreeting:"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

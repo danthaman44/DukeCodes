@@ -8,6 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UITextFieldDelegate> {
+    NSArray *keys;
+    NSArray *objs;
+    NSDictionary *dict;
+    NSMutableArray *autocompleteMajor;
+    NSMutableArray *pastMajors;
+    UITableView *autocompleteTableView;
+}
+
+- (IBAction)changeGreeting:(id)sender;
+- (void)searchAutocompleteEntriesWithSubstring:(NSString *)substring;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
+@property (copy, nonatomic) NSString *majorName;
+@property (copy, nonatomic) NSArray *keys;
+@property (copy, nonatomic) NSArray *objs;
+@property (copy, nonatomic) NSDictionary *dict;
+@property (nonatomic, retain) NSMutableArray *autocompleteMajor;
+@property (copy, nonatomic) NSArray *pastMajors;
+@property (nonatomic, retain) UITableView *autocompleteTableView;
+
+
 
 @end

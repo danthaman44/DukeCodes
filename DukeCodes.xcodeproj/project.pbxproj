@@ -467,6 +467,7 @@
 				EC8128B0175BE9380061AE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC8128B1175BE9380061AE1D /* Build configuration list for PBXNativeTarget "DukeCodesTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +476,7 @@
 				EC8128B3175BE9380061AE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
