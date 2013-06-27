@@ -15,6 +15,7 @@
     NSMutableArray *autocompleteMajor;
     NSMutableArray *pastMajors;
     UITableView *autocompleteTableView;
+
 }
 
 - (IBAction)changeGreeting:(id)sender;

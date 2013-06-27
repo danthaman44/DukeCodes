@@ -26,11 +26,12 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     //List the majors
-    self.pastMajors = [[NSMutableArray alloc] initWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Easter Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", nil];
+    self.pastMajors = [[NSMutableArray alloc] initWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Easter Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", @"Interdepartmental Major", @"International Comparative Studies", @"Italian", @"Linguistics", @"Literature", @"Mathematics", @"Mechanical Engineering", @"Medieval and Renaissance Studies", @"Music", @"Neuroscience", @"Other", @"Philosophy", @"Photography", @"Physics", @"Political Science", @"Program II", @"Psychology", nil];
     
     
-    keys = [NSArray arrayWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Easter Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", nil];
-    objs = [NSArray arrayWithObjects:@"1", @"2", @"4", @"5", @"7", @"43", @"57", @"8", @"9", @"44", @"21", @"10", @"97", @"12", @"13", @"52", @"15", @"16", @"89", @"45", @"42", @"17", @"19", @"18", @"6", @"36", @"20", @"22", nil];
+    keys = [NSArray arrayWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Easter Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", @"Interdepartmental Major", @"International Comparative Studies", @"Italian", @"Linguistics", @"Literature", @"Mathematics", @"Mechanical Engineering", @"Medieval and Renaissance Studies", @"Music", @"Neuroscience", @"Other", @"Philosophy", @"Photography", @"Physics", @"Political Science", @"Program II", @"Psychology", nil];
+    
+    objs = [NSArray arrayWithObjects:@"1", @"2", @"4", @"5", @"7", @"43", @"57", @"8", @"9", @"44", @"21", @"10", @"97", @"12", @"13", @"52", @"15", @"16", @"89", @"45", @"42", @"17", @"19", @"18", @"6", @"36", @"20", @"22", @"48", @"11", @"37", @"24", @"25", @"26", @"46", @"27", @"28", @"94", @"50", @"29", @"98", @"30", @"31", @"47", @"32", nil];
     dict = [NSMutableDictionary dictionaryWithObjects:objs forKeys:keys];
 
     
@@ -51,6 +52,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+// Clear the screen
 - (IBAction)changeGreeting:(id)sender {
     self.textField.text = nil;
     self.textField.placeholder = @"Enter your major";
@@ -103,8 +106,7 @@
     return YES;
 }
 
-#pragma mark UITableViewDataSource methods
-
+//Autocomplete table view
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
     return autocompleteMajor.count;
 }
@@ -121,6 +123,7 @@
     return cell;
 }
 
+//After selecting a table row
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     self.textField.text = selectedCell.textLabel.text;
