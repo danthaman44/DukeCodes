@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8h7-LR-MA8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="8lI-dw-yGI">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8h7-LR-MA8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bBx-9r-wdC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="YZD-46-MP3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sA-hx-bJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-309" y="-83"/>
+        </scene>
+        <!--View Controller - DukeCodes-->
         <scene sceneID="5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYx-Vo-nbY">
@@ -45,40 +59,71 @@
                                     <outlet property="delegate" destination="2" id="nyQ-uv-EaU"/>
                                 </connections>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAU-wk-sqh">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQE-jo-IbB">
                                 <items>
-                                    <navigationItem title="DukeCodes" id="qlt-8T-LiO"/>
+                                    <barButtonItem title="View full list" id="TRh-FJ-l9O">
+                                        <connections>
+                                            <segue destination="J6n-sR-KQv" kind="push" id="gbu-eq-9NA"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                            </navigationBar>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0q-OP-eVq">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items/>
-                            </tabBar>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MAU-wk-sqh" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="23d-SX-ABc"/>
-                            <constraint firstItem="CHL-HF-3JS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="63" id="9QG-o5-Mop"/>
-                            <constraint firstItem="MAU-wk-sqh" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="EaF-0J-M6a"/>
-                            <constraint firstItem="ROr-f4-502" firstAttribute="top" secondItem="3" secondAttribute="top" constant="104" id="GRR-In-ZGx"/>
-                            <constraint firstItem="j0q-OP-eVq" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="N97-CM-S9V"/>
-                            <constraint firstItem="MAU-wk-sqh" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="PcV-f1-wg3"/>
+                            <constraint firstItem="ROr-f4-502" firstAttribute="top" secondItem="CHL-HF-3JS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BNa-63-vkK"/>
+                            <constraint firstItem="bQE-jo-IbB" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="BlV-Cv-F4g"/>
                             <constraint firstItem="CHL-HF-3JS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R3i-O7-1Vh"/>
                             <constraint firstAttribute="trailing" secondItem="sYx-Vo-nbY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VRL-c3-C9W"/>
-                            <constraint firstItem="ROr-f4-502" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="57" id="bnO-9D-KG2"/>
-                            <constraint firstItem="j0q-OP-eVq" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="d01-v9-YZX"/>
+                            <constraint firstItem="bQE-jo-IbB" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="YNW-ae-JhT"/>
+                            <constraint firstItem="ROr-f4-502" firstAttribute="top" secondItem="sYx-Vo-nbY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="afe-Ml-lgS"/>
                             <constraint firstItem="sYx-Vo-nbY" firstAttribute="baseline" secondItem="CHL-HF-3JS" secondAttribute="baseline" type="default" id="dRt-sh-K0b"/>
-                            <constraint firstItem="CHL-HF-3JS" firstAttribute="top" secondItem="sYx-Vo-nbY" secondAttribute="top" type="default" id="iS4-4Z-A2d"/>
-                            <constraint firstItem="CHL-HF-3JS" firstAttribute="bottom" secondItem="sYx-Vo-nbY" secondAttribute="bottom" type="default" id="m7z-Py-3yP"/>
-                            <constraint firstItem="j0q-OP-eVq" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="tsN-zm-kwc"/>
+                            <constraint firstItem="sYx-Vo-nbY" firstAttribute="top" secondItem="CHL-HF-3JS" secondAttribute="top" type="default" id="l79-Ih-H8K"/>
+                            <constraint firstItem="bQE-jo-IbB" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="lZW-kt-05q"/>
+                            <constraint firstItem="CHL-HF-3JS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="pAZ-Yr-bOG"/>
+                            <constraint firstItem="ROr-f4-502" firstAttribute="centerX" secondItem="bQE-jo-IbB" secondAttribute="centerX" type="default" id="rGw-bL-kyJ"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="DukeCodes" id="hFu-sL-a8e"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="label" destination="ROr-f4-502" id="bFd-sO-taN"/>
                         <outlet property="textField" destination="CHL-HF-3JS" id="Rxj-eh-SQZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Web View Controller - DukeCodes-->
+        <scene sceneID="zMF-66-aAL">
+            <objects>
+                <viewController id="J6n-sR-KQv" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LQ9-iF-s1F">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30D-58-Lvb">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="30D-58-Lvb" firstAttribute="bottom" secondItem="LQ9-iF-s1F" secondAttribute="bottom" type="default" id="3rm-ZB-UJK"/>
+                            <constraint firstItem="30D-58-Lvb" firstAttribute="top" secondItem="LQ9-iF-s1F" secondAttribute="top" type="default" id="PeC-X2-uMw"/>
+                            <constraint firstItem="30D-58-Lvb" firstAttribute="trailing" secondItem="LQ9-iF-s1F" secondAttribute="trailing" type="default" id="YkZ-zU-LJN"/>
+                            <constraint firstItem="30D-58-Lvb" firstAttribute="leading" secondItem="LQ9-iF-s1F" secondAttribute="leading" type="default" id="lbz-Oc-shQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DukeCodes" id="nK6-IL-jCH"/>
+                    <connections>
+                        <outlet property="viewWeb" destination="30D-58-Lvb" id="0f0-zc-zwr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xY2-l4-SBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="-83"/>
         </scene>
     </scenes>
     <classes>
@@ -91,6 +136,12 @@
                 <relationship kind="action" name="changeGreeting:"/>
                 <relationship kind="outlet" name="label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="WebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="viewWeb" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>

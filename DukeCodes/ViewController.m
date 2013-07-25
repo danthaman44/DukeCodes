@@ -26,18 +26,18 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     //List the majors
-    self.pastMajors = [[NSMutableArray alloc] initWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Easter Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", @"Interdepartmental Major", @"International Comparative Studies", @"Italian", @"Linguistics", @"Literature", @"Mathematics", @"Mechanical Engineering", @"Medieval and Renaissance Studies", @"Music", @"Neuroscience", @"Other", @"Philosophy", @"Photography", @"Physics", @"Political Science", @"Program II", @"Psychology", nil];
+    self.pastMajors = [[NSMutableArray alloc] initWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Easter Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", @"Interdepartmental Major", @"International Comparative Studies", @"Italian", @"Linguistics", @"Literature", @"Mathematics", @"Mechanical Engineering", @"Medieval and Renaissance Studies", @"Music", @"Neuroscience", @"Other", @"Philosophy", @"Photography", @"Physics", @"Political Science", @"Program II", @"Psychology", @"Public Policy Studies", @"Religion", @"Russian", @"Slavic & Eurasian Studies", @"Socialogy", @"Spanish", @"Statistical Science", @"Theatre Studies", @"Undecided/Undeclared", @"Visual Arts", @"Visual Media Studies", @"Women's Studies", nil];
     
     
-    keys = [NSArray arrayWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Easter Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", @"Interdepartmental Major", @"International Comparative Studies", @"Italian", @"Linguistics", @"Literature", @"Mathematics", @"Mechanical Engineering", @"Medieval and Renaissance Studies", @"Music", @"Neuroscience", @"Other", @"Philosophy", @"Photography", @"Physics", @"Political Science", @"Program II", @"Psychology", nil];
+    keys = [NSArray arrayWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Easter Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", @"Interdepartmental Major", @"International Comparative Studies", @"Italian", @"Linguistics", @"Literature", @"Mathematics", @"Mechanical Engineering", @"Medieval and Renaissance Studies", @"Music", @"Neuroscience", @"Other", @"Philosophy", @"Photography", @"Physics", @"Political Science", @"Program II", @"Psychology", @"Public Policy Studies", @"Religion", @"Russian", @"Slavic & Eurasian Studies", @"Socialogy", @"Spanish", @"Statistical Science", @"Theatre Studies", @"Undecided/Undeclared", @"Visual Arts", @"Visual Media Studies", @"Women's Studies", nil];
     
-    objs = [NSArray arrayWithObjects:@"1", @"2", @"4", @"5", @"7", @"43", @"57", @"8", @"9", @"44", @"21", @"10", @"97", @"12", @"13", @"52", @"15", @"16", @"89", @"45", @"42", @"17", @"19", @"18", @"6", @"36", @"20", @"22", @"48", @"11", @"37", @"24", @"25", @"26", @"46", @"27", @"28", @"94", @"50", @"29", @"98", @"30", @"31", @"47", @"32", nil];
+    objs = [NSArray arrayWithObjects:@"1", @"2", @"4", @"5", @"7", @"43", @"57", @"8", @"9", @"44", @"21", @"10", @"97", @"12", @"13", @"52", @"15", @"16", @"89", @"45", @"42", @"17", @"19", @"18", @"6", @"36", @"20", @"22", @"48", @"11", @"37", @"24", @"25", @"26", @"46", @"27", @"28", @"94", @"50", @"29", @"98", @"30", @"31", @"47", @"32",@"33", @"34", @"99", @"39", @"40", @"38", @"53", @"14", @"49", @"3", @"96", @"42", nil];
     dict = [NSMutableDictionary dictionaryWithObjects:objs forKeys:keys];
 
     
     
     self.autocompleteMajor = [[NSMutableArray alloc] init];
-    autocompleteTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 120, 320, 120) style:UITableViewStylePlain];
+    autocompleteTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 80, 320, 120) style:UITableViewStylePlain];
     autocompleteTableView.delegate = self;
     autocompleteTableView.dataSource = self;
     autocompleteTableView.scrollEnabled = YES;
@@ -79,8 +79,6 @@
 }
 
 - (void)searchAutocompleteEntriesWithSubstring:(NSString *)substring {
-    NSLog(@"%@",@"searchAutocompleteEntriesWithSubstring is called");
-    
     // Put anything that starts with this substring into the autocompleteUrls array
     // The items in this array is what will show up in the table view
     [autocompleteMajor removeAllObjects];
@@ -95,7 +93,6 @@
 
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSLog(@"%@",@"shouldChangeCharactersInRange is called");
     autocompleteTableView.hidden = NO;
     textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
     

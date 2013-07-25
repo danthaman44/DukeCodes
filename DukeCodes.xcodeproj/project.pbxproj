@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC6153D11792703A005323BB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6153D01792703A005323BB /* WebViewController.m */; };
+		EC6153D21792703A005323BB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6153D01792703A005323BB /* WebViewController.m */; };
 		EC812877175BE9380061AE1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC812876175BE9380061AE1D /* UIKit.framework */; };
 		EC812879175BE9380061AE1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC812878175BE9380061AE1D /* Foundation.framework */; };
 		EC81287B175BE9380061AE1D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC81287A175BE9380061AE1D /* CoreGraphics.framework */; };
@@ -17,7 +19,6 @@
 		EC81288B175BE9380061AE1D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC81288A175BE9380061AE1D /* Default@2x.png */; };
 		EC81288D175BE9380061AE1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC81288C175BE9380061AE1D /* Default-568h@2x.png */; };
 		EC812890175BE9380061AE1D /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC81288E175BE9380061AE1D /* MainStoryboard_iPhone.storyboard */; };
-		EC812893175BE9380061AE1D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC812891175BE9380061AE1D /* MainStoryboard_iPad.storyboard */; };
 		EC812896175BE9380061AE1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC812895175BE9380061AE1D /* ViewController.m */; };
 		EC81289E175BE9380061AE1D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC81289D175BE9380061AE1D /* SenTestingKit.framework */; };
 		EC81289F175BE9380061AE1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC812876175BE9380061AE1D /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC6153CF1792703A005323BB /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		EC6153D01792703A005323BB /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		EC812873175BE9380061AE1D /* DukeCodes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DukeCodes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC812876175BE9380061AE1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EC812878175BE9380061AE1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,7 +54,6 @@
 		EC81288A175BE9380061AE1D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		EC81288C175BE9380061AE1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EC81288F175BE9380061AE1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		EC812892175BE9380061AE1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		EC812894175BE9380061AE1D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EC812895175BE9380061AE1D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC81289C175BE9380061AE1D /* DukeCodesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DukeCodesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,9 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				EC812885175BE9380061AE1D /* AppDelegate.h */,
+				EC6153CF1792703A005323BB /* WebViewController.h */,
+				EC6153D01792703A005323BB /* WebViewController.m */,
 				EC812886175BE9380061AE1D /* AppDelegate.m */,
 				EC81288E175BE9380061AE1D /* MainStoryboard_iPhone.storyboard */,
-				EC812891175BE9380061AE1D /* MainStoryboard_iPad.storyboard */,
 				EC812894175BE9380061AE1D /* ViewController.h */,
 				EC812895175BE9380061AE1D /* ViewController.m */,
 				EC81287D175BE9380061AE1D /* Supporting Files */,
@@ -239,7 +242,6 @@
 				EC81288B175BE9380061AE1D /* Default@2x.png in Resources */,
 				EC81288D175BE9380061AE1D /* Default-568h@2x.png in Resources */,
 				EC812890175BE9380061AE1D /* MainStoryboard_iPhone.storyboard in Resources */,
-				EC812893175BE9380061AE1D /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +279,7 @@
 				EC812883175BE9380061AE1D /* main.m in Sources */,
 				EC812887175BE9380061AE1D /* AppDelegate.m in Sources */,
 				EC812896175BE9380061AE1D /* ViewController.m in Sources */,
+				EC6153D11792703A005323BB /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8128AB175BE9380061AE1D /* DukeCodesTests.m in Sources */,
+				EC6153D21792703A005323BB /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,14 +317,6 @@
 				EC81288F175BE9380061AE1D /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		EC812891175BE9380061AE1D /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC812892175BE9380061AE1D /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		EC8128A6175BE9380061AE1D /* InfoPlist.strings */ = {
