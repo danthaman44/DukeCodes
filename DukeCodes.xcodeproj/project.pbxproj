@@ -25,6 +25,7 @@
 		EC8128A0175BE9380061AE1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC812878175BE9380061AE1D /* Foundation.framework */; };
 		EC8128A8175BE9380061AE1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC8128A6175BE9380061AE1D /* InfoPlist.strings */; };
 		EC8128AB175BE9380061AE1D /* DukeCodesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8128AA175BE9380061AE1D /* DukeCodesTests.m */; };
+		ECD4E11C17A0D6C200ADE45D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECD4E11B17A0D6C200ADE45D /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		EC8128A7175BE9380061AE1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC8128A9175BE9380061AE1D /* DukeCodesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DukeCodesTests.h; sourceTree = "<group>"; };
 		EC8128AA175BE9380061AE1D /* DukeCodesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DukeCodesTests.m; sourceTree = "<group>"; };
+		ECD4E11B17A0D6C200ADE45D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				EC81288E175BE9380061AE1D /* MainStoryboard_iPhone.storyboard */,
 				EC812894175BE9380061AE1D /* ViewController.h */,
 				EC812895175BE9380061AE1D /* ViewController.m */,
+				ECD4E11B17A0D6C200ADE45D /* README.txt */,
 				EC81287D175BE9380061AE1D /* Supporting Files */,
 			);
 			path = DukeCodes;
@@ -242,6 +245,7 @@
 				EC81288B175BE9380061AE1D /* Default@2x.png in Resources */,
 				EC81288D175BE9380061AE1D /* Default-568h@2x.png in Resources */,
 				EC812890175BE9380061AE1D /* MainStoryboard_iPhone.storyboard in Resources */,
+				ECD4E11C17A0D6C200ADE45D /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

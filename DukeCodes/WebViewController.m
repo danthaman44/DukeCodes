@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.'
-    NSString *fullURL = @"http://assessment.aas.duke.edu/evaluations/documents/Spring2012major-minor-certcodesheet.pdf";
+    NSString *fullURL = @"http://assessment.aas.duke.edu/evaluations/documents/major-minor-certcodesheet_001.pdf";
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [_viewWeb loadRequest:requestObj];
