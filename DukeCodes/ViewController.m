@@ -24,7 +24,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg.png"]];
+        
     //List the majors
     self.pastMajors = [[NSMutableArray alloc] initWithObjects:@"African & African American Studies", @"Arts History", @"Arts History/Visual Arts", @"Asian & Middle Eastern Studies", @"Biology", @"Biomedical Engineering", @"Biophysics", @"Canadian Studies", @"Chemistry",@"Civil and Environmental Engineering", @"Classical Languages", @"Classical Civilization", @"Computational Biology and Bioinformatics", @"Computer Science", @"Cultural Anthropology", @"Dance", @"Earth and Ocean Sciences", @"Economics", @"Education", @"Electrical and Computer Engineering", @"Engineering", @"English", @"Environmental Sciences", @"Environmental Sciences and Policy", @"Evolutionary Anthropology", @"French", @"German", @"History", @"Interdepartmental Major", @"International Comparative Studies", @"Italian", @"Linguistics", @"Literature", @"Mathematics", @"Mechanical Engineering", @"Medieval and Renaissance Studies", @"Music", @"Neuroscience", @"Other", @"Philosophy", @"Photography", @"Physics", @"Political Science", @"Program II", @"Psychology", @"Public Policy Studies", @"Religion", @"Russian", @"Slavic & Eurasian Studies", @"Socialogy", @"Spanish", @"Statistical Science", @"Theatre Studies", @"Undecided/Undeclared", @"Visual Arts", @"Visual Media Studies", @"Women's Studies", nil];
     
@@ -37,11 +38,15 @@
     
     
     self.autocompleteMajor = [[NSMutableArray alloc] init];
-    autocompleteTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 80, 320, 120) style:UITableViewStylePlain];
+    autocompleteTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 80, 320, 125) style:UITableViewStylePlain];
     autocompleteTableView.delegate = self;
     autocompleteTableView.dataSource = self;
     autocompleteTableView.scrollEnabled = YES;
     autocompleteTableView.hidden = YES;
+    autocompleteTableView.separatorColor = [UIColor blackColor];
+    autocompleteTableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg.png"]];
+    
+
     
     [self.view addSubview:autocompleteTableView];
 }
@@ -56,7 +61,7 @@
 // Clear the screen
 - (IBAction)changeGreeting:(id)sender {
     self.textField.text = nil;
-    self.textField.placeholder = @"Enter your major";
+    self.textField.placeholder = @"Enter your major/minor";
     self.label.text = nil;
     autocompleteTableView.hidden = YES;
 }
@@ -105,6 +110,10 @@
 
 //Autocomplete table view
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
+    NSInteger cellCount = autocompleteMajor.count;
+    if (cellCount == 0) {
+        autocompleteTableView.hidden = YES;
+    }
     return autocompleteMajor.count;
 }
 
@@ -117,6 +126,10 @@
     }
     
     cell.textLabel.text = [autocompleteMajor objectAtIndex:indexPath.row];
+    cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg.png"]];
+    cell.textLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg.png"]];
+    
+
     return cell;
 }
 

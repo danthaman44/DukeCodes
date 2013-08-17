@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC40918717BB474800269A36 /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EC40918617BB474800269A36 /* common_bg.png */; };
+		EC40918917C0434900269A36 /* navbar_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC40918817C0434900269A36 /* navbar_bg.jpg */; };
 		EC6153D11792703A005323BB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6153D01792703A005323BB /* WebViewController.m */; };
 		EC6153D21792703A005323BB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6153D01792703A005323BB /* WebViewController.m */; };
 		EC812877175BE9380061AE1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC812876175BE9380061AE1D /* UIKit.framework */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC40918617BB474800269A36 /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = common_bg.png; path = ../../../Workspace/DukeCodes/DukeCodes/common_bg.png; sourceTree = "<group>"; };
+		EC40918817C0434900269A36 /* navbar_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = navbar_bg.jpg; path = ../../../Workspace/DukeCodes/DukeCodes/navbar_bg.jpg; sourceTree = "<group>"; };
 		EC6153CF1792703A005323BB /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		EC6153D01792703A005323BB /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		EC812873175BE9380061AE1D /* DukeCodes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DukeCodes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,13 +128,15 @@
 			isa = PBXGroup;
 			children = (
 				EC812885175BE9380061AE1D /* AppDelegate.h */,
+				EC812886175BE9380061AE1D /* AppDelegate.m */,
 				EC6153CF1792703A005323BB /* WebViewController.h */,
 				EC6153D01792703A005323BB /* WebViewController.m */,
-				EC812886175BE9380061AE1D /* AppDelegate.m */,
 				EC81288E175BE9380061AE1D /* MainStoryboard_iPhone.storyboard */,
 				EC812894175BE9380061AE1D /* ViewController.h */,
 				EC812895175BE9380061AE1D /* ViewController.m */,
 				ECD4E11B17A0D6C200ADE45D /* README.txt */,
+				EC40918817C0434900269A36 /* navbar_bg.jpg */,
+				EC40918617BB474800269A36 /* common_bg.png */,
 				EC81287D175BE9380061AE1D /* Supporting Files */,
 			);
 			path = DukeCodes;
@@ -246,6 +252,8 @@
 				EC81288D175BE9380061AE1D /* Default-568h@2x.png in Resources */,
 				EC812890175BE9380061AE1D /* MainStoryboard_iPhone.storyboard in Resources */,
 				ECD4E11C17A0D6C200ADE45D /* README.txt in Resources */,
+				EC40918717BB474800269A36 /* common_bg.png in Resources */,
+				EC40918917C0434900269A36 /* navbar_bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

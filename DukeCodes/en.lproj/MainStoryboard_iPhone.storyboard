@@ -28,9 +28,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYx-Vo-nbY">
+                                <color key="backgroundColor" red="0.9844924748245667" green="0.9643762481663869" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="SYK-Vw-nnj"/>
+                                    <constraint firstAttribute="height" constant="42" id="tJK-2i-QNU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="clear">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="clear" backgroundImage="navbar_bg.jpg">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -45,11 +50,12 @@
                                     <constraint firstAttribute="width" constant="213" id="i5F-Lw-RQG"/>
                                     <constraint firstAttribute="height" constant="102" id="ogV-Lq-Se4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter your major/minor" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHL-HF-3JS">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="213" id="Nt8-8R-JTr"/>
                                 </constraints>
@@ -60,6 +66,7 @@
                                 </connections>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQE-jo-IbB">
+                                <color key="backgroundColor" red="0.098061521355844672" green="0.019564126591619768" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem title="View full list" id="TRh-FJ-l9O">
                                         <connections>
@@ -67,20 +74,21 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" red="0.031737090871506279" green="0.005713517305257293" blue="0.33636209239130432" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ROr-f4-502" firstAttribute="top" secondItem="CHL-HF-3JS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BNa-63-vkK"/>
                             <constraint firstItem="bQE-jo-IbB" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="BlV-Cv-F4g"/>
+                            <constraint firstItem="sYx-Vo-nbY" firstAttribute="centerY" secondItem="CHL-HF-3JS" secondAttribute="centerY" type="default" id="Bsy-o8-8jL"/>
+                            <constraint firstItem="sYx-Vo-nbY" firstAttribute="top" secondItem="CHL-HF-3JS" secondAttribute="top" type="default" id="OfL-BY-k7f"/>
                             <constraint firstItem="CHL-HF-3JS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R3i-O7-1Vh"/>
+                            <constraint firstItem="ROr-f4-502" firstAttribute="top" secondItem="sYx-Vo-nbY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SHj-xZ-DTm"/>
                             <constraint firstAttribute="trailing" secondItem="sYx-Vo-nbY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VRL-c3-C9W"/>
                             <constraint firstItem="bQE-jo-IbB" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="YNW-ae-JhT"/>
-                            <constraint firstItem="ROr-f4-502" firstAttribute="top" secondItem="sYx-Vo-nbY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="afe-Ml-lgS"/>
                             <constraint firstItem="sYx-Vo-nbY" firstAttribute="baseline" secondItem="CHL-HF-3JS" secondAttribute="baseline" type="default" id="dRt-sh-K0b"/>
-                            <constraint firstItem="sYx-Vo-nbY" firstAttribute="top" secondItem="CHL-HF-3JS" secondAttribute="top" type="default" id="l79-Ih-H8K"/>
+                            <constraint firstItem="CHL-HF-3JS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="gix-hn-Uqo"/>
                             <constraint firstItem="bQE-jo-IbB" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="lZW-kt-05q"/>
-                            <constraint firstItem="CHL-HF-3JS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="pAZ-Yr-bOG"/>
                             <constraint firstItem="ROr-f4-502" firstAttribute="centerX" secondItem="bQE-jo-IbB" secondAttribute="centerX" type="default" id="rGw-bL-kyJ"/>
                         </constraints>
                     </view>
@@ -126,25 +134,9 @@
             <point key="canvasLocation" x="802" y="-83"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeGreeting:"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="WebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="viewWeb" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
+    <resources>
+        <image name="navbar_bg.jpg" width="270" height="39"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
